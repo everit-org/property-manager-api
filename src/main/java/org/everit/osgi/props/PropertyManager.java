@@ -43,7 +43,7 @@ public interface PropertyManager {
      *
      * @param key
      *            Key whose mapping is to be removed
-     * @return
+     * @return the value that was stored till now, null if there was no such value.
      */
     String removeProperty(String key);
 

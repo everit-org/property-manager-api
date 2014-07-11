@@ -81,9 +81,8 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
-            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Export-Package>
-              ${project.artifactId}
+              org.everit.osgi.props
             </Export-Package>
           </instructions>
         </configuration>
