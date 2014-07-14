@@ -16,6 +16,12 @@
  */
 package org.everit.osgi.props;
 
+/**
+ * Property Manager allows the programmer to put key-value pairs in a persistent store. Keys should be unique, therefore
+ * the user of the library should prefix each key in the way that they do not conflict with keys that come from other
+ * modules. The key-value pairs should not be cached on the user side. The implementation should take care of caching in
+ * the way that it keeps data consistent even in a clustered environment.
+ */
 public interface PropertyManager {
 
     /**
@@ -39,7 +45,7 @@ public interface PropertyManager {
     String getProperty(String key);
 
     /**
-     * Removes the association for a key from this map if it is present.
+     * Removes the association for a key from this store if it is present.
      *
      * @param key
      *            Key whose mapping is to be removed
