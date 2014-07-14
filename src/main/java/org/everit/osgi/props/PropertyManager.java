@@ -62,8 +62,7 @@ public interface PropertyManager {
     String removeProperty(String key);
 
     /**
-     * Replaces the value of the given key, and returns its previous value. If there was no associated value of this
-     * key, returns null.
+     * Replaces the value of the given key in the store.
      *
      * @param key
      *            Key with which the specified value is to be associated.
