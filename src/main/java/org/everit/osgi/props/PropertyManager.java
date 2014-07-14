@@ -32,15 +32,21 @@ public interface PropertyManager {
      *            key with which the specified value is to be associated
      * @param value
      *            value to be associated with the specified key
+     * @throws NullPointerException
+     *             if the key or value parameter is null.
+     * @throws RuntimeException
+     *             an excpetion should be thrown if the key already exists.
      */
     void addProperty(String key, String value);
 
     /**
-     * Returns the value of the given key, or null if this Property Service contains no mapping for the key.
+     * Returns the value of the given key, or null if this Property Manager contains no mapping for the key.
      *
      * @param key
      *            The key whose associated value is to be returned
      * @return The value of the given key, or null if this Property Service contains no mapping for the key.
+     * @throws NullPointerException
+     *             if the key parameter is null.
      */
     String getProperty(String key);
 
@@ -50,6 +56,8 @@ public interface PropertyManager {
      * @param key
      *            Key whose mapping is to be removed
      * @return the value that was stored till now, null if there was no such value.
+     * @throws NullPointerException
+     *             if the key parameter is null.
      */
     String removeProperty(String key);
 
@@ -62,6 +70,8 @@ public interface PropertyManager {
      * @param value
      *            Value to be associated with the specified key. Null value is not supported.
      * @return The previous value of the modified key, or null if there was no associated value of this key.
+     * @throws NullPointerException
+     *             if the key or value parameter is null.
      */
     String updateProperty(String key, String value);
 }
