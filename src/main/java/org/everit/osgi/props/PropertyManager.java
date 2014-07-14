@@ -44,7 +44,7 @@ public interface PropertyManager {
      *
      * @param key
      *            The key whose associated value is to be returned
-     * @return The value of the given key, or null if this Property Service contains no mapping for the key.
+     * @return The value of the given key, or null if this Property Manager contains no mapping for the key.
      * @throws NullPointerException
      *             if the key parameter is null.
      */
