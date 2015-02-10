@@ -29,7 +29,8 @@
 
   <groupId>org.everit.osgi</groupId>
   <artifactId>org.everit.osgi.props.api</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
+
   <packaging>bundle</packaging>
 
   <name>Everit - Property Manager API</name>
@@ -82,14 +83,28 @@
         <configuration>
           <instructions>
             <Export-Package>
-              org.everit.osgi.props
+              org.everit.osgi.props;version=1.0.0
             </Export-Package>
           </instructions>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>net.distilledcode.maven</groupId>
+        <artifactId>baselining-maven-plugin</artifactId>
+        <version>1.0.4</version>
+        <executions>
+          <execution>
+            <id>baseline</id>
+            <goals>
+              <goal>baseline</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
 
   <dependencies>
   </dependencies>
+
 </project>
